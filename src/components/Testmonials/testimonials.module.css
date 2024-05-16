@@ -1,0 +1,190 @@
+.testimonialsComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.topCompaniesComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: beige;
+}
+.topCompaniesComponent h1 span:first-child{
+    font-size: 2.5rem;
+    opacity: 0.6;
+    color: black;
+}
+.topCompaniesComponent h1 span{
+    color: violet;
+}
+
+.topCompaniesCards{
+    display: flex;
+    width: 90%;
+    height: 120px ;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow-x:scroll ; */
+    /* border: 2px solid red; */
+    
+}
+
+.cardLogo{
+    /* padding: 2rem; */
+    /* border: 2px solid blue; */
+    width: 9rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 14px;
+    background-color: azure;
+    height: 80px;
+    
+}
+
+.cardLogo h2{
+    opacity: 0.6;
+}
+
+.courseBenefits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(227, 220, 210); */
+}
+
+.courseBenefits h1 span:first-child, .courseBenefits h2 span:nth-child(3){
+    font-size: 2.5rem;
+    opacity: 0.6;
+    color: black;
+}
+
+.courseBenefits h1 span:nth-child(2),.courseBenefits h2 span:nth-child(4){
+    color: rgb(191, 80, 191);
+}
+
+.panels{
+    display: flex;
+    gap: 2rem;
+    /* border: 1px solid grey; */
+}
+.leftPanel{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid violet;
+    background-color: rgb(236, 214, 236);
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+    /* gap: 1rem; */
+}
+
+.leftPanel h3{
+    /* width: fit-content; */
+    text-align: center;
+}
+/* .leftPanel img{
+    width: 250px;
+    height: 200px;
+} */
+.leftPanelChips{
+    display: flex;
+    gap: 1.5rem;
+}
+.leftPanelChips span{
+    /* display: flex; */
+    /* border: 2px solid black; */
+    border: 2px solid rgb(238, 138, 238);
+    border-radius: 16px;
+    width: 150px;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: smaller;
+    /* flex-direction: row; */
+}
+
+.rightPanel{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(245, 245, 167);
+    background-color:beige;
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+}
+
+.rightPanel p{
+    /* width: ; */
+ font-size: smaller;
+ opacity: 0.6;
+}
+
+@media (max-width: 360px) {
+    .topCompaniesComponent h1{
+        font-size: 1rem;
+    }
+    .topCompaniesCards{
+        width: 90%;
+        gap: 0.5rem;
+        overflow-x: scroll;
+    }
+    .cardLogo{
+        width: 200px;
+    }
+    .cardLogo h2{
+        font-size: 1rem;
+    }
+    .panels{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 360px; */
+
+    }
+    .leftPanel{
+        width: 95vw;
+        margin-left: 4rem;
+    }
+    .leftPanel img{
+        width: 250px;
+        height: 250px;
+    }
+    .rightPanel{
+        width: 95vw;
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .topCompaniesCards{
+        width: 80vw;
+        row-gap: rem;
+        overflow-x: scroll;
+    }
+    .cardLogo{
+        width: 25%;
+    }
+    .panels{
+        width: 90vw;
+    }
+    .leftPanel img{
+        object-fit: contain;
+        width: 330px ;
+    }
+}
+
+

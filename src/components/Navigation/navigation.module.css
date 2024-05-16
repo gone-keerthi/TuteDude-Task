@@ -1,0 +1,45 @@
+.navigationComponent{
+    display: flex;
+    justify-content: center;
+    background-color: #3B3B3E;
+    height: 3rem;
+    align-items: center;
+}
+
+.navigationComponent ul{
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    /* margin-left: 0; */
+    /* margin-top: 0; */
+    /* margin-bottom: 0; */
+    
+}
+
+.navigationComponent ul li{
+    display: flex;
+    color: azure;
+    /* border: 2px solid black; */
+    padding: 0.2rem;
+    height: 75%;
+    align-items: center;
+}
+.navigationComponent ul li:hover{
+    border-bottom: 10px solid rgb(175, 175, 82);
+    /* border-radius: 10px; */
+}
+
+@media (max-width: 360px) {
+    .navigationComponent{
+        width: 100vw;
+    }
+    .navigationComponent ul {
+        gap: 0.3rem;
+        margin-left: 0;
+    }
+}

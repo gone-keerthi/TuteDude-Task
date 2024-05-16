@@ -1,0 +1,107 @@
+.cirriculumComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 202, 245);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.curriculumComponentHeader {
+  -moz-fit-content: fit-content;
+  width: fit-content;
+  border: 1px solid violet;
+  border-radius: 26px;
+  padding: 1rem;
+  color: rgb(153, 38, 153);
+  font-weight: 500;
+}
+
+.cirriculumComponent h1 {
+  font-size: 2.5rem;
+  /* opacity: 0.5; */
+}
+.cirriculumComponent h1 span:first-child {
+  color: rgb(101, 37, 101);
+}
+.cirriculumComponent h1 span:last-child {
+  color: black;
+  opacity: 0.75;
+}
+
+.accordion {
+  border: 1px solid rgb(213, 210, 210);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.accordionCard {
+  /* border: 1px solid grey; */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: 1px solid rgb(213, 210, 210);
+  background-color: azure;
+  /* overflow: hidden; */
+}
+
+.accordionCard:last-child() {
+  border-bottom: none;
+}
+
+.accordionCard h2 {
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+.accordionCardLeft p {
+  opacity: 0.6;
+  margin-top: 0;
+}
+
+.accordionCardRight {
+  /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+  /* padding: 1rem; */
+  /* border-radius: 26px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid violet; */
+}
+
+.accordionCardRight p {
+  /* border: 1px solid rgb(99, 65, 99); */
+  border-radius: 26px;
+  padding: 1rem;
+  background-color: rgb(235, 197, 235);
+  color: rgb(165, 3, 165);
+  font-weight: 500;
+}
+
+@media (max-width: 360px) {
+  .cirriculumComponent {
+    width: 100vw;
+  }
+  .curriculumComponentHeader {
+    font-size: smaller;
+  }
+  .cirriculumComponent h1 {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .accordion {
+    width: 100vw;
+  }
+  .accordionCard {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+}

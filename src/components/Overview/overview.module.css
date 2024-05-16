@@ -1,0 +1,136 @@
+.overviewComponent {
+  display: flex;
+  flex-direction: column;
+}
+.headerChip {
+  padding: 1rem;
+  display: block;
+  width: fit-content;
+  border: 2px solid rgb(185, 232, 47);
+  border-radius: 16px;
+  opacity: 0.8;
+}
+
+.overviewComponent h1 {
+  font-size: 3.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.overviewComponent h1 span {
+  color: #b73bbe;
+  /* background: linear-gradient(to right, #B73BBE 0%, #992E9D 93.51%); */
+}
+.overviewComponent p {
+  opacity: 0.7;
+}
+
+.chipsCards {
+  display: flex;
+  width: max-content;
+  /* flex-wrap: wrap; */
+  /* border: 2px solid blue; */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.chipsCards span {
+  /* width: fit-content; */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: rgb(188, 76, 36);
+  border: 2px solid rgb(188, 76, 36);
+  border-radius: 16px;
+}
+.overviewBtns {
+  width: fit-content;
+  display: flex;
+  /* border: 2px solid blue; */
+  gap: 2rem;
+}
+.overviewBtns button {
+  width: 7rem;
+  height: 2.5rem;
+  /* border-radius: 16px; */
+  color: #b73bbe;
+  border-style: none;
+  background: none;
+  font-weight: 550;
+  font-size: smaller;
+  letter-spacing: 0.3px;
+}
+
+.overviewBtns button:hover {
+  border-radius: 16px;
+  color: white;
+  background-image: linear-gradient(to bottom, #b73bbe 0%, #992e9d 93.51%);
+}
+
+.cardsComponent {
+  width: 100%;
+  height: 8rem;
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: rgb(246, 215, 246);
+}
+
+.card {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* height: 8rem; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid grey;
+  /* border: 2px solid red; */
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid green; */
+  /* margin: 0; */
+}
+
+.cardContent h2 {
+  font-size: 2rem;
+  color: #992e9d;
+  margin: 0;
+}
+.cardContent p {
+  font-size: larger;
+  margin: 0;
+}
+
+@media (max-width: 360px) {
+  .overviewComponent h1 {
+    font-size: 1.8rem;
+  }
+  .chipsCards {
+    width: 100%;
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    /* gap: 0.2rem; */
+  }
+
+  .chipsCards span {
+    font-size: small;
+  }
+  .overviewBtns{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  .cardsComponent{
+    display: none;
+  }
+}

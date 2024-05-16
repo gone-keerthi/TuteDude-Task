@@ -1,0 +1,61 @@
+/* *{
+    padding: 0.2rem;
+} */
+
+.headerComponent {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rightContent {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightContent button {
+    font-size: medium;
+    font-weight: 600;
+    /* letter-spacing: 0.06rem; */
+  width: 100px;
+  height: 30px;
+  gap: 2rem;
+  border-style: none;
+  background: none;
+  color: rgb(170, 86, 170);;
+}
+
+.rightContent button:hover {
+  width: 100px;
+  height: 40px;
+  border-radius: 16px;
+  color: white;
+  background-image: linear-gradient(to bottom, #B73BBE 0%, #992E9D 93.51%);
+}
+
+.active {
+  /* Add styles for the active state of the signup button */
+  width: 100px;
+  height: 40px;
+  border-radius: 16px;
+  color: white;
+  background-image: linear-gradient(to bottom, #B73BBE 0%, #992E9D 93.51%);
+}
+
+@media (max-width: 360px) {
+  .headerComponent{
+    width: 100vw;
+  }
+  .rightContent{
+    display: flex;
+    justify-content: flex-end; ;
+    gap: 0.2rem;
+  }
+  .rightContent button{
+    gap: 0.2rem ;
+    width: fit-content;
+  }
+}
+
