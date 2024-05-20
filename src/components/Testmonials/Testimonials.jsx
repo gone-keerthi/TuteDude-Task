@@ -11,9 +11,11 @@ const Testimonials = () => {
             <span>Top Companies Hiring </span> <span>Data Scientist </span>
           </h1>
           <div className={styles.topCompaniesCards}>
+            
             <div className={styles.cardLogo}>
               <h2>Logo</h2>
             </div>
+
             <div className={styles.cardLogo}>
               <h2>Logo</h2>
             </div>
@@ -26,7 +28,9 @@ const Testimonials = () => {
             <div className={styles.cardLogo}>
               <h3>Logo</h3>
             </div>
+            
           </div>
+          
         </div>
         <div className={styles.courseBenefits}>
           <h1>

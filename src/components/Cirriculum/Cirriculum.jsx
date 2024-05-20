@@ -1,5 +1,7 @@
 import React from "react";
 import styles from './curriculum.module.css'
+// import icons 
+import { RxEyeOpen } from "react-icons/rx";
 const Cirriculum = () => {
   return (
     <>
@@ -13,7 +15,7 @@ const Cirriculum = () => {
               <p>Learn C++ for strong programming fundamentals. </p>
             </div>
             <div className={styles.accordionCardRight}>
-              <p>View Curriculum </p>
+              <p> <RxEyeOpen /> View Curriculum </p>
             </div>
           </div>
 
@@ -23,7 +25,7 @@ const Cirriculum = () => {
               <p>Master the MERN stack for high-demand projects. </p>
             </div>
             <div className={styles.accordionCardRight}>
-              <p>View Curriculum </p>
+              <p> <RxEyeOpen /> View Curriculum </p>
             </div>
           </div>
 
@@ -33,7 +35,7 @@ const Cirriculum = () => {
               <p>Excel in Data Structures and Algorithms for interview success.  </p>
             </div>
             <div className={styles.accordionCardRight}>
-              <p>View Curriculum </p>
+              <p> <RxEyeOpen /> View Curriculum </p>
             </div>    
           </div>
 
@@ -43,7 +45,7 @@ const Cirriculum = () => {
               <p> Structures and Algorithms for interview success.</p>
             </div>
             <div className={styles.accordionCardRight}>
-              <p>View Curriculum </p>
+              <p> <RxEyeOpen /> View Curriculum </p>
             </div>
           </div>
         </div>

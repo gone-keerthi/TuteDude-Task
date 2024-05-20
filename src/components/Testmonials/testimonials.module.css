@@ -20,7 +20,11 @@
     color: black;
 }
 .topCompaniesComponent h1 span{
-    color: violet;
+    background: linear-gradient( to right, #992E9D,#BB5302 );
+    color: transparent;
+    /* -webkit-text-fill-color: transparent;  */
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .topCompaniesCards{
@@ -31,7 +35,8 @@
     align-items: center;
     /* overflow-x:scroll ; */
     /* border: 2px solid red; */
-    
+    transition: moving;
+    transition: all 4s ease-in-out;
 }
 
 .cardLogo{
@@ -44,7 +49,8 @@
     border-radius: 14px;
     background-color: azure;
     height: 80px;
-    
+    /* transition: moving;
+    transition: all 4s ease-in-out; */
 }
 
 .cardLogo h2{
@@ -130,6 +136,15 @@
     /* width: ; */
  font-size: smaller;
  opacity: 0.6;
+}
+
+@keyframes moving {
+    from{
+        width: 0;
+    }
+    to{
+        width: 300px !important;
+    }
 }
 
 @media (max-width: 360px) {

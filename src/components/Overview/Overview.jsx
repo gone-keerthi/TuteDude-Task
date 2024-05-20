@@ -1,11 +1,22 @@
 import React from "react";
 import styles from "./overview.module.css";
+// import icons
+import { FaGraduationCap } from "react-icons/fa6";
+import { MdVerified } from "react-icons/md";
+import { FiSend } from "react-icons/fi";
+import { FaRegQuestionCircle } from "react-icons/fa";
+
+// import assets
+import Courses from './courses.png'
+import Graduated from './Graduated.png'
+import Question from './Question mark.png'
+import Completed from './Complete.png'
 
 const Overview = () => {
   return (
     <>
       <div className={styles.overviewComponent}>
-        <p className={styles.headerChip}>An IIT Delhi Alumni Initiative</p>
+        <p className={styles.headerChip}> <FaGraduationCap /> An IIT Delhi Alumni Initiative</p>
         <h1>
           Become an Expert in the <br></br>field of{" "}
           <span>
@@ -17,17 +28,17 @@ const Overview = () => {
           <strong> 5+extensive online courses.</strong>{" "}
         </p>
         <div className={styles.chipsCards}>
-          <span> Personal Mentorship </span>
-          <span> Internship Assistance </span>
-          <span> Industry Certified Courses </span>
+          <span> <MdVerified /> Personal Mentorship </span>
+          <span> <MdVerified /> Internship Assistance </span>
+          <span> <MdVerified /> Industry Certified Courses </span>
         </div>
-        <div className={styles.overviewBtns}>
-          <button>Enroll Now </button>
-          <button>Know More </button>
+        <div className={styles.overviewButtons}>
+          <button> Enroll Now <FiSend /> </button>
+          <button>Know More <FaRegQuestionCircle /> </button>
         </div>
         <div className={styles.cardsComponent}>
           <div className={styles.card}>
-            <img src="" alt="courses" />
+            <img src={Courses} alt="courses" />
             <div className={styles.cardContent}>
               <h2>24</h2>
               <p>Courses</p>
@@ -35,7 +46,7 @@ const Overview = () => {
           </div>
 
           <div className={styles.card}>
-            <img src="" alt="courses" />
+            <img src={Graduated} alt="courses" />
             <div className={styles.cardContent}>
               <h2>30k+</h2>
               <p>Learners</p>
@@ -43,7 +54,8 @@ const Overview = () => {
           </div>
 
           <div className={styles.card}>
-            <img src="" alt="courses" />
+            <img src={Question} alt="courses" />
+            
             <div className={styles.cardContent}>
               <h2>100k+</h2>
               <p> Doubts Solved </p>
@@ -51,7 +63,7 @@ const Overview = () => {
           </div>
 
           <div className={styles.card}>
-            <img src="" alt="courses" />
+            <img src={Completed} alt="courses" />
             <div className={styles.cardContent}>
               <h2>10k+</h2>
               <p>Student Projects</p>

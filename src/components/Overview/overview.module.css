@@ -5,10 +5,14 @@
 .headerChip {
   padding: 1rem;
   display: block;
-  width: fit-content;
-  border: 2px solid rgb(185, 232, 47);
+  width: max-content;
+  -moz-fit-content: fit-content;
+  /* border: 2px solid rgb(185, 232, 47); */
+  border: 1px solid var(--Web-Orange-500, #FFA50B);
   border-radius: 16px;
-  opacity: 0.8;
+ color: var(--Woodsmoke-800, #434347);
+
+  /* opacity: 0.8; */
 }
 
 .overviewComponent h1 {
@@ -39,17 +43,21 @@
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
-  color: rgb(188, 76, 36);
-  border: 2px solid rgb(188, 76, 36);
+  /* color: rgb(188, 76, 36); */
+  /* border: 2px solid rgb(188, 76, 36); */
   border-radius: 16px;
+  border: 1px solid var(--Web-Orange-100, #FFF4C5);
+  color: var(--Web-Orange-700, #BB5302);
+  background: var(--Web-Orange-50, #FFFCEA);
 }
-.overviewBtns {
-  width: fit-content;
+.overviewButtons {
+  width: '-moz-fit-content';
   display: flex;
   /* border: 2px solid blue; */
+  flex-direction: row;
   gap: 2rem;
 }
-.overviewBtns button {
+.overviewButtons button {
   width: 7rem;
   height: 2.5rem;
   /* border-radius: 16px; */
@@ -61,7 +69,7 @@
   letter-spacing: 0.3px;
 }
 
-.overviewBtns button:hover {
+.overviewButtons button:hover {
   border-radius: 16px;
   color: white;
   background-image: linear-gradient(to bottom, #b73bbe 0%, #992e9d 93.51%);
@@ -83,7 +91,9 @@
   /* height: 8rem; */
   flex-direction: row;
   align-items: center;
+  /* justify-content: space-evenly; */
   justify-content: center;
+  gap: 1rem;
   border-right: 1px solid grey;
   /* border: 2px solid red; */
 }
@@ -96,6 +106,7 @@
   display: flex;
   flex-direction: column;
   /* border: 2px solid green; */
+  width: 200px;
   /* margin: 0; */
 }
 
@@ -107,9 +118,13 @@
 .cardContent p {
   font-size: larger;
   margin: 0;
+  width: 100%;
+  /* width: fit-content; */
+  /* border: 2px solid black; */
+  /* text-align: center; */
 }
 
-@media (max-width: 360px) {
+@media (min-width: 360px) {
   .overviewComponent h1 {
     font-size: 1.8rem;
   }

@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./refund.module.css";
-
+import Pic from './image 533.png'
 const Refund = () => {
+  // const Time = new Date();
   return (
     <>
       <div className={styles.refundComponent}>
@@ -12,8 +13,9 @@ const Refund = () => {
         </h1>
 
         <div className={styles.offerCard}>
-          <h2>100% Refund Offer </h2>
-          <input className={styles.slider} type="range" value={20} />
+          <h2>100% Refund Offer 😎 </h2>
+          <input className={styles.slider} type="range" id="range"  min={0} max={100} value={25} />
+          <label for="range"></label>
           <p>Offer ends in 10:00 Mins</p>
         </div>
 
@@ -26,7 +28,7 @@ const Refund = () => {
 
             <div className={styles.checkoutStepOne}>
               <p>Step 1: Enroll into your favorite course for only $1,499 </p>
-              <img src="" alt="pic" />
+              <img src={Pic} alt="pic" />
               <p>Start Learning with <strong>Lifetime Course Access.</strong>  </p>
             </div>
           </div>

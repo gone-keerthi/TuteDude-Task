@@ -19,8 +19,8 @@ const Header = () => {
           <p>Logo</p>
         </div>
         <div className={styles.rightContent}>
-          <button  onClick={handleLoginClick}>Login</button>
-          <button onClick={handleSignupClick} className={signupActive ? styles.active : ''}>Signup</button>
+          <button   onClick={handleLoginClick}>Login</button>
+          <button className={signupActive ? styles.active : ''} onClick={handleSignupClick}>Signup</button>
         </div>
       </div>
     </>

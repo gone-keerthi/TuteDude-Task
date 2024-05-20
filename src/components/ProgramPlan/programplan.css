@@ -1,0 +1,274 @@
+.programPlanComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 2px solid yellow; */
+  padding-bottom: 30px;
+  /* align-items: center; */
+}
+
+.programPlanComponentTitle {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* width: 100vw; */
+  /* border: 2px solid green; */
+}
+
+.programPlanComponentTitle p {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  /* border: 2px solid green; */
+  width: '-moz-fit-content';
+  color: transparent;
+  background: linear-gradient(180deg, #b872d0 0%, #372faa 100%);
+  /* -webkit-text-fill-color: transparent;  */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.timeline {
+  /* width: 100%; */
+  /* overflow: hidden; */
+  position: relative;
+  /* border: 2px solid red; */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: space-eventually; */
+}
+
+ul {
+  list-style-type: none;
+  /* border: 2px solid red; */
+  /* width: fit-content; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* left: 50%; */
+  /* transform: translateX(10%); */
+}
+
+li {
+  width: 15%;
+  display: inline-block;
+  position: relative;
+  /* gap: 2px; */
+}
+
+.bullet {
+  width: 50px;
+  height: 50px;
+  /* background-color: black; */
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  border: 1px solid;
+  border-color: rgba(63, 55, 201, 0.74);
+  transform: translateX(-50%);
+  /* justify-content: center;
+    align-items: center; */
+}
+
+.bullet p {
+  text-align: center;
+}
+
+li:nth-child(even) .bullet {
+  top: calc(100% + 70px); /* Top offset to place the bullet below the content */
+  /* rotate: 45deg; */
+  left: 7px;
+}
+
+li:nth-child(odd) .bullet {
+  top: -120px;
+  left: 7px; /* Top offset to place the bullet above the content */
+}
+
+/* Connecting Line */
+.timeline ul li::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 15px);
+  height: 1px;
+  background-color: blue;
+  top: 50%;
+  /* left: 10; */
+  z-index: -1; /* Push the line behind the content */
+  /* border: 2px solid violet; */
+  transform-origin: center;
+}
+
+/* Style to hide line before first item */
+.timeline ul li:last-child::before {
+  display: none;
+}
+
+.timeline ul li:nth-child(odd)::before {
+  background: linear-gradient(
+    90.24deg,
+    rgba(63, 55, 201, 0.74) -11.5%,
+    rgba(177, 66, 64, 0.53) 169.22%
+  );
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.timeline ul li:nth-child(even)::before {
+  background: linear-gradient(
+    90.24deg,
+    rgba(63, 55, 201, 0.74) -11.5%,
+    rgba(177, 66, 64, 0.53) 169.22%
+  );
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.content {
+  position: absolute;
+  left: 80%;
+  transform: translateX(-50%);
+  /* transform: translateY(-50%); */
+  width: 150px; /* Adjust as needed */
+  text-align: center;
+  /* border: 2px solid green; */
+  /* top: 50px; */
+  width: 250px;
+  font-size: smaller;
+  color: #150e42;
+}
+
+li:nth-child(odd) .content {
+  top: -120px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+li:nth-child(even) .content {
+  top: 50px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.programPlanCta {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin-bottom: -50%; */
+  /* width: 100vw; */
+  /* border: 2px solid green; */
+}
+
+.programPlanCta button {
+  border-radius: 12px;
+  background: linear-gradient(176.18deg, #800080 -2.53%, #7e267e 27.29%);
+  color: white;
+  border-style: none;
+  height: 50px;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .programPlanComponentTitle p {
+    font-size: 1.5rem;
+  }
+  /* .content{
+    transform: translateX(-50%);
+    left: 90px;
+    margin-bottom: -110px;
+  } */
+  .content p {
+    /* border: 2px solid red; */
+    font-size: smaller;
+    width: 120px;
+  }
+  .bullet {
+    width: 40px;
+    height: 40px;
+  }
+  li:nth-child(even) .bullet {
+    top: 30px;
+  }
+  li:nth-child(odd) .bullet{
+    top: -80px;
+  } 
+
+  li:nth-child(odd) .content {
+    top: -100px;
+    left: 100%;
+  }
+
+  li:nth-child(even) .content{
+    top: 20px;
+    left: 100%;
+  } 
+}
+
+@media (max-width: 360px){
+    .programPlanComponent{
+        width: 100vw;
+        height:600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .programPlanComponentTitle p {
+        font-size: 1rem;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* border : 1px solid blue */
+    }
+    li{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        width: 100%;
+        /* border: 2px solid blue; */
+        justify-content: space-around;
+    }
+    .bullet{
+        display: none;
+        /* transform: none; */
+        /* width: 15px;
+        height: 15px; */
+    }
+      .content {
+        position: static;
+         /* Remove absolute positioning */
+        transform: none; 
+        width: 250px; /* Reset width */
+        /* margin: 0 auto; */
+         /* Center content */
+        text-align: center;
+        /* border: 2px solid green; */
+      }
+      .timeline ul li::before {
+        display: none;
+        transform: none;
+      }  
+      
+      .content p{
+        font-size: 1rem;
+        width: 120%;
+        border: 2px solid green;
+      }
+}
+

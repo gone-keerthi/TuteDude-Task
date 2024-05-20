@@ -35,7 +35,7 @@
   background-image: linear-gradient(to bottom, #B73BBE 0%, #992E9D 93.51%);
 }
 
-.active {
+.rightContent button:active {
   /* Add styles for the active state of the signup button */
   width: 100px;
   height: 40px;
@@ -55,7 +55,8 @@
   }
   .rightContent button{
     gap: 0.2rem ;
-    width: fit-content;
+    width: '-moz-fit-content';
+     
   }
 }
 
